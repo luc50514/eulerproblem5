@@ -67,4 +67,16 @@ defmodule Eulerproblem5Test do
   test "when given [10,1] should return prime factors of 10 to 1" do
     assert Eulerproblem5.getprimesfactorslist([10,1]) == [[2,5],[3,3],[2,2,2],[7],[2,3],[5],[2,2],[3],[2],[]]
   end
+
+  test "when given [20,1] should return prime factors of 20 to 1" do
+    assert Eulerproblem5.getprimesfactorslist([20,1]) == [[2, 2, 5],[19],[2, 3, 3],[17],[2, 2, 2, 2],[3, 5],[2, 7],[13],[2, 2, 3],[11],[2,5],[3,3],[2,2,2],[7],[2,3],[5],[2,2],[3],[2],[]]
+  end
+
+  test "when given arrays of numbers from 10 to 2 should be 2250" do
+    assert Eulerproblem5.multiplynumberstogether(10) == 2520
+  end
+
+  test "when given arrays of numbers from 20 to 2 should be 232792560" do
+    assert Eulerproblem5.multiplynumberstogether(20) == 232792560
+  end
 end

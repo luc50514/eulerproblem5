@@ -41,4 +41,20 @@ defmodule Eulerproblem5 do
       Primes2.get(primenumbers)
     end
   end
+
+  def multiplynumberstogether(firstnumber) do
+    listofnumbers = Enum.to_list firstnumber..2
+    _solve(firstnumber+1,listofnumbers, firstnumber)
+  end
+
+  defp _solve(n, [], _), do: n
+
+  defp _solve(n, [h | t],firstnumber) do
+    listofnumbers = Enum.to_list firstnumber..2
+    case rem(n, h) do
+      0 -> _solve(n, t, firstnumber)
+      _ -> _solve(n+1, listofnumbers, firstnumber )
+    end
+
+  end
 end
